@@ -3,6 +3,10 @@ from flask import (
 )
 import sendgrid
 
+import sib_api_v3_sdk
+
+from sib_api_v3_sdk.rest import ApiException
+
 from sendgrid.helpers.mail import *
 
 from app.db import get_db
