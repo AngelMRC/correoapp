@@ -1,10 +1,6 @@
 from flask import (
     Blueprint, render_template, request, flash, url_for, redirect, current_app
 )
-from __future__ import print_function
-import sib_api_v3_sdk
-from sib_api_v3_sdk.rest import ApiException
-
 import sendgrid
 
 from sendgrid.helpers.mail import *
