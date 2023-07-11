@@ -42,7 +42,7 @@ def create():
         if len(errors) == 0:
             send(email, subject, content)
             db, c = get_db()
-            c.execute("INSERT INTO email(email, subject, content) VALUES(%s, %s, %s)",
+            c.execute("INSERT INTO email(email, subject, content) VALUES (%s, %s, %s)",
                       (email, subject, content))
             db.commit()
 
@@ -52,9 +52,6 @@ def create():
                 flash(error)
 
     return render_template('mails/create.html')
-
-
-user_mail = "reyes.mkngel@gmail.com"
 
 
 def send(to, subject, content):
