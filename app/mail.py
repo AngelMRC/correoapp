@@ -54,6 +54,9 @@ def create():
     return render_template('mails/create.html')
 
 
+user_mail = "reyes.mkngel@gmail.com"
+
+
 def send(to, subject, content):
     sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_KEY'])
     from_email = Email(current_app.config['FROM_EMAIL'])
